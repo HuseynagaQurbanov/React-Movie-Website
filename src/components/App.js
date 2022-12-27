@@ -42,9 +42,9 @@ class App extends React.Component {
       m => m.id !== movie.id
     )
 
-    this.setState({
+    this.setState(state => ({
       movies: newMovieList
-    })
+    }))
   }
 
   render() {

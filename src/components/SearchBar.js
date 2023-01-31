@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class SearchBar extends React.Component {
   handleFormSubmit = (e) => {
@@ -20,9 +21,9 @@ class SearchBar extends React.Component {
             </div>
           </div>
           <div className="col-lg-2 ">
-            <button type="button" className="add-movie-btn btn btn-success btn-md mt-3 mb-3 ms-3">
+            <Link to="/add" type="button" className="add-movie-btn btn btn-success btn-md mt-3 mb-3 ms-3">
               Add Movie
-            </button>
+            </Link>
           </div>
         </form>
       </div>

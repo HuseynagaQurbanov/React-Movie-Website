@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
 import AddMovie from "./AddMovie";
 import axios from "axios";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends React.Component {
   state = {
@@ -17,6 +17,19 @@ class App extends React.Component {
     this.setState({ movies: response.data });
   }
 
+
+  // Add Movie
+
+  addMovie = async (movie) => {
+    await axios.post(`http://localhost:3002/movies/`, movie);
+    
+    this.setState( state => ({movies: state.movies.concat([movie])}))
+
+
+  }
+
+  // Delete Movie
+
   deleteMovie = async (movie) => {
     await axios.delete(`http://localhost:3002/movies/${movie.id}`);
 
@@ -26,6 +39,8 @@ class App extends React.Component {
       movies: newMovieList,
     }));
   };
+
+  // Search Movie
 
   searchMovie = (e) => {
     this.setState({ searchQuery: e.target.value });
@@ -58,7 +73,7 @@ class App extends React.Component {
               }
             ></Route>
 
-            <Route path="/add" element={<AddMovie />} />
+            <Route path="/add" element={ (<AddMovie onAddMovie = {(movie) => {this.addMovie(movie)}}/>)} />
           </Routes>
         </div>
       </Router>

@@ -1,14 +1,50 @@
 import React from "react";
-import serialize from "form-serialize";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-class AddMovie extends React.Component {
+class EditMovie extends React.Component {
+  state = {
+    name: "",
+    rating: "",
+    overview: "",
+    imageURL: "",
+  };
+
+  async componentDidMount() {
+    const id = window.location.pathname.replace("/edit/", "");
+    const response = await axios.get(`http://localhost:3002/movies/${id}`);
+    const movie = response.data;
+    console.log(movie);
+
+    this.setState({
+      name: movie.name,
+      rating: movie.rating,
+      overview: movie.overview,
+      imageURL: movie.imageURL,
+    });
+  }
+
+  onInputChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   handleFormSubmit = (e) => {
     e.preventDefault();
 
-    var newMovie = serialize(e.target, { hash: true });
+    const { name, rating, overview, imageURL } = this.state;
 
-    this.onAddMovie(newMovie);
+    const id = window.location.pathname.replace("/edit/", "");
+
+    const updatedMovie = {
+      name: name,
+      rating: rating,
+      overview: overview,
+      imageURL: imageURL
+    }
+
+    this.props.onEditMovie(id, updatedMovie);
 
     useNavigate("/");
   };
@@ -21,7 +57,7 @@ class AddMovie extends React.Component {
             className="form-control"
             id="disabledInput"
             type="text"
-            placeholder="Fill The Form To Add A Movie.."
+            placeholder="Fill The Form To Edit Movie.."
             style={{ marginBottom: "10px" }}
             disabled
           />
@@ -33,6 +69,8 @@ class AddMovie extends React.Component {
                 className="form-control"
                 name="name"
                 style={{ marginBottom: "10px" }}
+                value={`${this.state.name}`}
+                onChange={this.onInputChange}
               />
             </div>
             <div className="form-group col-md-2">
@@ -42,6 +80,8 @@ class AddMovie extends React.Component {
                 className="form-control"
                 name="rating"
                 style={{ marginBottom: "10px" }}
+                value={`${this.state.rating}`}
+                onChange={this.onInputChange}
               />
             </div>
           </div>
@@ -53,6 +93,8 @@ class AddMovie extends React.Component {
                 className="form-control"
                 name="imageURL"
                 style={{ marginBottom: "10px" }}
+                value={`${this.state.imageURL}`}
+                onChange={this.onInputChange}
               />
             </div>
           </div>
@@ -64,13 +106,15 @@ class AddMovie extends React.Component {
                 name="overview"
                 style={{ marginBottom: "10px" }}
                 rows="5"
+                value={`${this.state.overview}`}
+                onChange={this.onInputChange}
               ></textarea>
             </div>
           </div>
           <input
             type="submit"
             className="btn btn-success btn-block"
-            value="Add Movie"
+            value="Edit Movie"
           />
         </form>
       </div>
@@ -78,4 +122,4 @@ class AddMovie extends React.Component {
   }
 }
 
-export default AddMovie;
+export default EditMovie;

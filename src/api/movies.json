@@ -1,41 +1,6 @@
 {
   "movies": [
     {
-      "id": 1,
-      "name": "The Flash",
-      "rating": 8.3,
-      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
-      "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Interstellar",
-      "rating": 6.8,
-      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
-      "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Arrow",
-      "rating": 7.9,
-      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
-      "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Rogue",
-      "rating": 7.4,
-      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
-      "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/uOw5JD8IlD546feZ6oxbIjvN66P.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Superman",
-      "rating": 7.6,
-      "overview": "This is a wider card with supporting text below as a natural lead-in to additional content.",
-      "imageURL": "https://image.tmdb.org/t/p/w220_and_h330_face/6Bbq8qQWpoApLZYWFFAuZ1r2gFw.jpg"
-    },
-    {
       "name": "The Last of Us",
       "rating": "8.9",
       "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
@@ -48,6 +13,48 @@
       "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
       "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
       "id": 8
+    },
+    {
+      "name": "Black Panther: Wakanda Forever",
+      "rating": "7.6",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+      "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+      "id": 9
+    },
+    {
+      "name": "Legend",
+      "rating": "7.0",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4shf5Alq4KWCKqrAAQe0JGJHYp5.jpg",
+      "overview": "Suave, charming and volatile, Reggie Kray and his unstable twin brother Ronnie start to leave their mark on the London underworld in the 1960s. Using violence to get what they want, the siblings orchestrate robberies and murders while running nightclubs and protection rackets. With police Detective Leonard \"Nipper\" Read hot on their heels, the brothers continue their rapid rise to power and achieve tabloid notoriety.",
+      "id": 10
+    },
+    {
+      "name": "Iron Man 3",
+      "rating": "6.9",
+      "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+      "id": 11
+    },
+    {
+      "name": "Spider-Man: No Way Home",
+      "rating": "8.0",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+      "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+      "id": 12
+    },
+    {
+      "name": "Teenage Mutant Ninja Turtles",
+      "rating": "5.9",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/azL2ThbJMIkts3ZMt3j1YgBUeDB.jpg",
+      "overview": "When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.",
+      "id": 13
+    },
+    {
+      "name": "The Amazing Spider-Man 2",
+      "rating": "6.5",
+      "imageURL": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
+      "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+      "id": 14
     }
   ]
 }
